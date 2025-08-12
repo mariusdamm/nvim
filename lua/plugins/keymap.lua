@@ -26,6 +26,7 @@ return {
     wk.add({
       { "<leader>b", group = "buffer" },
       { "<leader>g", group = "git" },
+      { "<leader>s", group = "search" },
       { "<leader>f", group = "file" },
       { "<leader>c", group = "code" },
       { "<leader>w", proxy = "<c-w>", group = "windows" },
