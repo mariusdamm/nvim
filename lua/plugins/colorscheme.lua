@@ -5,9 +5,7 @@ return {
     priority = 1000,
     opts = {},
     config = function()
-      require("tokyonight").setup({
-      })
-      -- vim.cmd.colorscheme "tokyonight-night"
+      vim.cmd.colorscheme "tokyonight-night"
     end
 
   },
@@ -15,7 +13,7 @@ return {
     "ntk148v/habamax.nvim",
     dependencies = { "rktjmp/lush.nvim" },
     config = function()
-      vim.cmd.colorscheme "habamax"
+      -- vim.cmd.colorscheme "habamax"
     end,
   },
 }
