@@ -11,9 +11,10 @@ return {
     vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = 'Telescope list recent files' })
 
     vim.keymap.set('n', '<leader>bf', builtin.buffers, { desc = 'Telescope buffers' })
-    vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = 'Remove current buffer' })
-    vim.keymap.set('n', '<leader>bn', ':bnext<CR>', { desc = 'Go to next buffer' })
-    vim.keymap.set('n', '<leader>bp', ':bprevious<CR>', { desc = 'Go to previous buffer' })
+    -- now in snacks using snacks.bufdelete(n)
+    -- vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = 'Remove current buffer' })
+    vim.keymap.set('n', 'L', ':bnext<CR>', { desc = 'Go to next buffer' })
+    vim.keymap.set('n', 'H', ':bprevious<CR>', { desc = 'Go to previous buffer' })
 
 
     vim.keymap.set('n', '<leader>:', builtin.command_history, { desc = 'Telescope see command history' })

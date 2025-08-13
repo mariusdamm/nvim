@@ -31,5 +31,6 @@ return {
     { "<leader>n",  function() Snacks.notifier.show_history() end, desc = "Notification History" },
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     { "<leader>si", function() Snacks.picker.icons() end, desc = "Icons" },
+    { "<leader>bd", function(n) Snacks.bufdelete(n) end, desc = "Remove current buffer" }
   },
 }
