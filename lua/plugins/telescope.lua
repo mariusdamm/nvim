@@ -18,7 +18,7 @@ return {
 
 
     vim.keymap.set('n', '<leader>:', builtin.command_history, { desc = 'Telescope see command history' })
-    vim.keymap.set('n', '<leader>C', builtin.colorscheme, { desc = 'Telescope list colorschemes' })
+    -- vim.keymap.set('n', '<leader>C', builtin.colorscheme, { desc = 'Telescope list colorschemes' })
     vim.keymap.set('n', '<leader>k', builtin.keymaps, { desc = 'Telescope list keymaps' })
   end
 }
