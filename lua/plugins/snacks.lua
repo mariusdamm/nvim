@@ -12,10 +12,9 @@ return {
             section = "terminal",
             -- cmd = "chafa ~/.config/nvim/misc/pic.jpeg --format symbols --symbols vhalf --size 60x18 --stretch; sleep .1",
             cmd = "cat ~/.config/nvim/misc/pic.txt; sleep .1",
-            height = 17,
+            height = 18,
             padding = 1,
           },
-
           { section = "keys", gap = 1, padding = 1 },
           { section = "startup" },
         },
