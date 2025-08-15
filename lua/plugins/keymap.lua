@@ -30,6 +30,7 @@ return {
       { "<leader>f", group = "file" },
       { "<leader>c", group = "code" },
       { "<leader>w", proxy = "<c-w>", group = "windows" },
+      { "<leader>qq", ":qa<CR>", desc = "Quit all", hidden = true},
     })
   end
 }
