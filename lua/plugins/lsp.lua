@@ -1,6 +1,7 @@
 local lsp = {
-  "lua_ls",
-  "gopls",
+  "lua_ls", -- lua
+  "gopls", -- golang
+  "ruff", -- python
 }
 
 return {
