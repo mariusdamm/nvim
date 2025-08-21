@@ -9,7 +9,7 @@ return {
     end
 
   },
-  { 
+  {
     "ntk148v/habamax.nvim",
     dependencies = { "rktjmp/lush.nvim" },
     config = function()
