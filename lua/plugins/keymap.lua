@@ -29,8 +29,13 @@ return {
       { "<leader>s", group = "search" },
       { "<leader>f", group = "file" },
       { "<leader>c", group = "code" },
+      { "<leader>t", group = "tabs" },
       { "<leader>w", proxy = "<c-w>", group = "windows" },
       { "<leader>qq", ":qa<CR>", desc = "Quit all", hidden = true},
+      { "<leader>tn", ":tabnext<CR>", desc = "Next tab" },
+      { "<leader>tp", ":tabprevious<CR>", desc = "Previous tab" },
+      { "<leader>tt", ":tabnew<CR>", desc = "New tab" },
+      { "<leader>tq", ":tabclose<CR>", desc = "Close tab" },
     })
   end
 }
