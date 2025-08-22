@@ -17,11 +17,11 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
-
-      for _, server in ipairs(lsp) do
-        lspconfig[server].setup({})
-      end
+      -- local lspconfig = require("lspconfig")
+      --
+      -- for _, server in ipairs(lsp) do
+      --   lspconfig[server].setup({})
+      -- end
 
       -- globale LSP-Keymaps
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show details" })
