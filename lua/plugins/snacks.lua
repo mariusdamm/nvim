@@ -33,5 +33,6 @@ return {
     { "<leader>bd", function(n) Snacks.bufdelete(n) end, desc = "Remove current buffer" },
     { "<leader>C", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
+    { "<leader>D", function() Snacks.dashboard() end, desc = "Dashboard" },
   },
 }
