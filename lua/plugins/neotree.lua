@@ -7,8 +7,15 @@ return {
       "MunifTanjim/nui.nvim",
       "nvim-tree/nvim-web-devicons",
     },
-    config = function()
-      require('neo-tree').setup({ })
+    opts = {
+      window = {
+        mappings = {
+          ["<space>"] = "none",
+        },
+      }
+    },
+    config = function(_, opts)
+      require('neo-tree').setup(opts)
       vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Neotree fileexplorer" })
     end,
   },
