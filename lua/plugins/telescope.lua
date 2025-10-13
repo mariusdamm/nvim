@@ -1,8 +1,20 @@
 return {
   'nvim-telescope/telescope.nvim',
-  branch = '0.1.x',
+  branch = 'master',
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
+    require('telescope').setup{
+      defaults = {
+        preview = {
+          timeout = 100,
+        },
+      },
+      pickers = {
+        find_files = {
+          previewer = false,
+        },
+      }
+    }
     local builtin = require('telescope.builtin')
 
     vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
