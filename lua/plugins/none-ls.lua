@@ -1,17 +1,14 @@
 return {
 	"nvimtools/none-ls.nvim",
 	config = function()
-		local mason_lspconfig = require("mason-lspconfig")
-
-		mason_lspconfig.setup({
-			ensure_installed = {
-				"stylua",
-			},
-		})
 		local nls = require("null-ls")
 		nls.setup({
 			sources = {
 				nls.builtins.formatting.stylua,
+				nls.builtins.formatting.gofumpt,
+				nls.builtins.formatting.goimports,
+				nls.builtins.formatting.prettier,
+				nls.builtins.formatting.isort,
 			},
 		})
 
