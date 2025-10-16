@@ -20,6 +20,13 @@ return {
 		priority = 1000,
 		config = function()
 			require("onedark").setup({
+				code_style = {
+					comments = "italic",
+					keywords = "none",
+					functions = "bold",
+					strings = "none",
+					variables = "none",
+				},
 				style = "darker",
 			})
 			-- Enable theme
