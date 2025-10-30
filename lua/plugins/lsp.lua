@@ -2,6 +2,7 @@ local lsp = {
   "lua_ls", -- lua
   "gopls", -- golang
   "pyright", -- python
+  "texlab", -- latex
 }
 
 return {
