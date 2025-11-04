@@ -38,7 +38,7 @@ return {
 			{ "<leader>tq", ":tabclose<CR>", desc = "Close tab" },
 		})
 
-		vim.keymap.set("n", "L", "L5<C-e>", { noremap = true, silent = true })
-		vim.keymap.set("n", "H", "H5<C-y>", { noremap = true, silent = true })
+		-- vim.keymap.set("n", "L", "L5<C-e>", { noremap = true, silent = true })
+		-- vim.keymap.set("n", "H", "H5<C-y>", { noremap = true, silent = true })
 	end,
 }

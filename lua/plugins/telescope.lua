@@ -25,8 +25,8 @@ return {
     vim.keymap.set('n', '<leader>bf', builtin.buffers, { desc = 'Telescope buffers' })
     -- now in snacks using snacks.bufdelete(n)
     -- vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = 'Remove current buffer' })
-    vim.keymap.set('n', '<leader>bl', ':bnext<CR>', { desc = 'Go to next buffer' })
-    vim.keymap.set('n', '<leader>bh', ':bprevious<CR>', { desc = 'Go to previous buffer' })
+    vim.keymap.set('n', 'L', ':bnext<CR>', { desc = 'Go to next buffer' })
+    vim.keymap.set('n', 'H', ':bprevious<CR>', { desc = 'Go to previous buffer' })
 
 
     vim.keymap.set('n', '<leader>:', builtin.command_history, { desc = 'Telescope see command history' })
