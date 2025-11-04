@@ -11,7 +11,7 @@ return {
       },
       pickers = {
         find_files = {
-          previewer = false,
+          previewer = true,
         },
       }
     }
