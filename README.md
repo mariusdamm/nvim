@@ -17,6 +17,14 @@ Plugin manager: Lazy
 
 ## Screenshots
 
+### Dashboard
+
 ![Dashboard screenshot](screenshots/dashboard.png "Dashboard")
+
+### Editor
+
+![Editor screenshot](screenshots/editor.png "Editor")
+
+### Lazygit integration
 
 ![Lazygit screenshot](screenshots/lazygit.png "Lazygit")
