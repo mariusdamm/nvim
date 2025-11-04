@@ -23,6 +23,7 @@ return {
     bigfile = { enabled = true },
     input = { enabled = true },
     indent = { enabled = true },
+    image = { enabled = true },
     picker = { enabled = true },
     notifier = { enabled = true },
   },
