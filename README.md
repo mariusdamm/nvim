@@ -18,3 +18,5 @@ Plugin manager: Lazy
 ## Screenshots
 
 ![Dashboard screenshot](screenshots/dashboard.png "Dashboard")
+
+![Lazygit screenshot](screenshots/lazygit.png "Lazygit")
