@@ -13,7 +13,7 @@ Plugin manager: Lazy
 - Fileexplorer: neotree
 - Dashboard: snacks
 - Styling: lualine, bufferline
-- Formatting: none-ls, mason-null-ls
+- Formatting: conform
 
 ## Screenshots
 
