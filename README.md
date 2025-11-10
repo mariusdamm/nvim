@@ -41,6 +41,12 @@ have to be downloaded otherwise.
 - Styling: lualine, bufferline
 - Formatting: conform
 
+## Handy Keymap
+
+- <space>: Leader key, show keymap
+- <H> / <L>: Switch buffers to previous / next one
+- <F4>: Toggle terminal
+
 ## Screenshots
 
 ### Dashboard
