@@ -43,9 +43,9 @@ have to be downloaded otherwise.
 
 ## Handy Keymap
 
-- <space>: Leader key, show keymap
-- <H> / <L>: Switch buffers to previous / next one
-- <F4>: Toggle terminal
+- space: Leader key, show keymap
+- H / L: Switch buffers to previous / next one
+- F4: Toggle terminal
 
 ## Screenshots
 
