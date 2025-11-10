@@ -2,6 +2,32 @@
 
 Plugin manager: Lazy
 
+## Requirements
+
+Some requirements can be installed via a package manager. I use brew on MacOS,
+but it should work with Linux package managers as well. Other requirements
+have to be downloaded otherwise.
+
+### Requirements via package manager
+
+- Neovim
+- Git
+- Lazygit
+- Tree-sitter-cli
+- A C compiler
+- curl
+- tar
+- fd
+- ripgrep
+- a terminal that support true color and undercurl (I use kitty in MacOS;
+  ghostty can be used for Windows)
+- NodeJS
+- latexmk
+
+### Other Requirements
+
+- [A Nerd Font](https://www.nerdfonts.com)
+
 ## Plugins
 
 - Colorschemes: tokyonight, habamax
