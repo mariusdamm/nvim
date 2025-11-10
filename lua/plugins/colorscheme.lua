@@ -5,7 +5,16 @@ return {
 		priority = 1000,
 		opts = {},
 		config = function()
-			-- vim.cmd.colorscheme("tokyonight-night")
+			local tokyonight = require("tokyonight")
+			tokyonight.setup({
+				style = "night",
+				styles = {
+					comments = { italic = true },
+					keywords = { italic = true },
+					functions = { bold = true },
+				},
+			})
+			tokyonight.load()
 		end,
 	},
 	{
@@ -29,8 +38,7 @@ return {
 				},
 				style = "darker",
 			})
-			-- Enable theme
-			require("onedark").load()
+			-- require("onedark").load()
 		end,
 	},
 }
