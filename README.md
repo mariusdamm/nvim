@@ -28,6 +28,10 @@ have to be downloaded otherwise.
 - python
 - texlive-bin
 - wget
+- julia
+- composer
+- biber
+- skim
 
 ### Other Requirements
 
