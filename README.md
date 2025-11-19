@@ -23,6 +23,11 @@ have to be downloaded otherwise.
   ghostty can be used for Windows)
 - NodeJS
 - latexmk
+- php
+- ruby
+- python
+- texlive-bin
+- wget
 
 ### Other Requirements
 
