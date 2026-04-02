@@ -36,7 +36,7 @@ return {
 			desc = "Notification History",
 		},
 		{
-			"<leader>gg",
+			"<leader>G",
 			function()
 				Snacks.lazygit()
 			end,
