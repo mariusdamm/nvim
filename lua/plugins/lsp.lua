@@ -30,7 +30,8 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Go to reference" })
 			vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.type_definition, { desc = "Go to definition" })
+			vim.keymap.set("n", "<leader>gD", vim.lsp.buf.type_definition, { desc = "Go to definition" })
+			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 		end,
 	},
 	{
