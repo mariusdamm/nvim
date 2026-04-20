@@ -3,11 +3,13 @@ return {
 	branch = "master",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
-    {
-      "<leader>ff",
-      function() require("telescope.builtin").find_files() end,
-      desc = "Find Plugin File",
-    },
+		{
+			"<leader>ff",
+			function()
+				require("telescope.builtin").find_files()
+			end,
+			desc = "Telescope find file",
+		},
 		{
 			"<leader>fg",
 			function()
