@@ -36,6 +36,8 @@ return {
 			{ "<leader>tp", ":tabprevious<CR>", desc = "Previous tab" },
 			{ "<leader>tt", ":tabnew<CR>", desc = "New tab" },
 			{ "<leader>tq", ":tabclose<CR>", desc = "Close tab" },
+			{ "L", ":bnext<CR>", desc = "Go to next buffer" },
+			{ "H", ":bprevious<CR>", desc = "Go to previous buffer" },
 		})
 
 		-- vim.keymap.set("n", "L", "L5<C-e>", { noremap = true, silent = true })
