@@ -2,6 +2,63 @@ return {
 	"nvim-telescope/telescope.nvim",
 	branch = "master",
 	dependencies = { "nvim-lua/plenary.nvim" },
+	keys = {
+    {
+      "<leader>ff",
+      function() require("telescope.builtin").find_files() end,
+      desc = "Find Plugin File",
+    },
+		{
+			"<leader>fg",
+			function()
+				require("telescope.builtin").live_grep()
+			end,
+			desc = "Telescope live grep",
+		},
+		{
+			"<leader>fh",
+			function()
+				require("telescope.builtin").help_tags()
+			end,
+			desc = "Telescope help tags",
+		},
+		{
+			"<leader>fr",
+			function()
+				require("telescope.builtin").oldfiles()
+			end,
+			desc = "Telescope list recent files",
+		},
+		{
+			"<leader>bf",
+			function()
+				require("telescope.builtin").buffers()
+			end,
+			desc = "Telescope buffers",
+		},
+		{
+			"<leader>:",
+			function()
+				require("telescope.builtin").command_history()
+			end,
+			desc = "Telescope see command history",
+		},
+		{
+			"<leader>k",
+			function()
+				require("telescope.builtin").keymaps()
+			end,
+			desc = "Telescope list keymaps",
+		},
+	},
+	opts = {
+		defaults = {
+			layout_strategy = "horizontal",
+			layout_config = { prompt_position = "bottom" },
+			sorting_strategy = "ascending",
+			winblend = 0,
+		},
+	},
 	config = function()
 		require("telescope").setup({
 			defaults = {
@@ -10,26 +67,14 @@ return {
 				},
 			},
 			pickers = {
+				live_grep = {
+					previewer = true,
+				},
 				find_files = {
 					previewer = true,
 				},
 			},
 		})
 		local builtin = require("telescope.builtin")
-
-		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-		vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
-		vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Telescope list recent files" })
-
-		vim.keymap.set("n", "<leader>bf", builtin.buffers, { desc = "Telescope buffers" })
-		-- now in snacks using snacks.bufdelete(n)
-		-- vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = 'Remove current buffer' })
-		vim.keymap.set("n", "L", ":bnext<CR>", { desc = "Go to next buffer" })
-		vim.keymap.set("n", "H", ":bprevious<CR>", { desc = "Go to previous buffer" })
-
-		vim.keymap.set("n", "<leader>:", builtin.command_history, { desc = "Telescope see command history" })
-		-- vim.keymap.set('n', '<leader>C', builtin.colorscheme, { desc = 'Telescope list colorschemes' })
-		vim.keymap.set("n", "<leader>k", builtin.keymaps, { desc = "Telescope list keymaps" })
 	end,
 }
