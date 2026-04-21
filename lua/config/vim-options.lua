@@ -11,14 +11,15 @@ vim.cmd("let g:loaded_perl_provider = 0")
 -- vim.g.maplocalleader = "\\"
 -- vim.keymap.set("n", "<leader>qq", ":wqa<CR>", { desc = "Write-Quit everything" })
 
-vim.api.nvim_create_autocmd("BufWinLeave", {
-	callback = function(ev)
-		if vim.bo[ev.buf].buftype == "nofile" then
-			vim.schedule(function()
-				if vim.api.nvim_buf_is_valid(ev.buf) then
-					vim.api.nvim_buf_delete(ev.buf, { force = true })
-				end
-			end)
-		end
-	end,
-})
+-- makes checkhealth quit with just pressing q but telescope preview goes mental
+-- vim.api.nvim_create_autocmd("BufWinLeave", {
+-- 	callback = function(ev)
+-- 		if vim.bo[ev.buf].buftype == "nofile" then
+-- 			vim.schedule(function()
+-- 				if vim.api.nvim_buf_is_valid(ev.buf) then
+-- 					vim.api.nvim_buf_delete(ev.buf, { force = true })
+-- 				end
+-- 			end)
+-- 		end
+-- 	end,
+-- })

@@ -2,7 +2,6 @@ return {
 	"nvim-telescope/telescope.nvim",
 	version = false,
 	dependencies = {
-		"LazyVim/LazyVim",
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
@@ -67,10 +66,10 @@ return {
 			},
 			pickers = {
 				find_files = {
-					preview = false,
+					preview = true,
 				},
 				live_grep = {
-					preview = false,
+					preview = true,
 				},
 			},
 		})
