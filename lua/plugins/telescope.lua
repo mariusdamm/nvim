@@ -1,7 +1,11 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	branch = "master",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	version = false,
+	dependencies = {
+		"LazyVim/LazyVim",
+		"nvim-lua/plenary.nvim",
+		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+	},
 	keys = {
 		{
 			"<leader>ff",
@@ -53,30 +57,22 @@ return {
 			desc = "Telescope list keymaps",
 		},
 	},
-	opts = {
-		defaults = {
-			layout_strategy = "horizontal",
-			layout_config = { prompt_position = "bottom" },
-			sorting_strategy = "ascending",
-			winblend = 0,
-		},
-	},
 	config = function()
 		require("telescope").setup({
 			defaults = {
-				preview = {
-					timeout = 100,
-				},
+				layout_strategy = "horizontal",
+				layout_config = { prompt_position = "bottom" },
+				sorting_strategy = "descending",
+				winblend = 0,
 			},
 			pickers = {
-				live_grep = {
-					previewer = true,
-				},
 				find_files = {
-					previewer = true,
+					preview = false,
+				},
+				live_grep = {
+					preview = false,
 				},
 			},
 		})
-		local builtin = require("telescope.builtin")
 	end,
 }
