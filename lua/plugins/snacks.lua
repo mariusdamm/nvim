@@ -26,7 +26,24 @@ return {
 		image = { enabled = true },
 		picker = { enabled = true },
 		notifier = { enabled = true },
+		styles = {
+			notification_history = { border = "single" },
+			notification = { border = "single" },
+			input = { border = "single" },
+			picker = {
+				win = {
+					input = { border = "single" },
+					list = { border = "single" },
+					preview = { border = "single" },
+				},
+			},
+		},
 	},
+	config = function(_, opts)
+		require("snacks").setup(opts)
+		vim.ui.input = require("snacks").input
+		vim.ui.select = require("snacks").picker
+	end,
 	keys = {
 		{
 			"<leader>n",

@@ -1,44 +1,124 @@
 return {
 	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-		config = function()
-			local tokyonight = require("tokyonight")
-			tokyonight.setup({
-				style = "night",
-				styles = {
-					comments = { italic = true },
-					keywords = { italic = true },
-					functions = { bold = true },
-				},
-			})
-			tokyonight.load()
-		end,
-	},
-	{
-		"ntk148v/habamax.nvim",
-		dependencies = { "rktjmp/lush.nvim" },
-		config = function()
-			-- vim.cmd.colorscheme "habamax"
-		end,
-	},
-	{
-		"navarasu/onedark.nvim",
+		"catppuccin/nvim",
+		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			require("onedark").setup({
-				code_style = {
-					comments = "italic",
-					keywords = "none",
-					functions = "bold",
-					strings = "none",
-					variables = "none",
+			require("catppuccin").setup({
+				flavour = "macchiato", -- latte, frappe, macchiato, mocha
+				background = { -- :h background
+					light = "latte",
+					dark = "mocha",
 				},
-				style = "darker",
+				transparent_background = false, -- disables setting the background color.
+				float = {
+					transparent = false, -- enable transparent floating windows
+					solid = false, -- use solid styling for floating windows, see |winborder|
+				},
+				term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+				dim_inactive = {
+					enabled = false, -- dims the background color of inactive window
+					shade = "dark",
+					percentage = 0.15, -- percentage of the shade to apply to the inactive window
+				},
+				no_italic = false, -- Force no italic
+				no_bold = false, -- Force no bold
+				no_underline = false, -- Force no underline
+				styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+					comments = { "italic" }, -- Change the style of comments
+					conditionals = { "italic" },
+					loops = {},
+					functions = { "bold", "italic" },
+					keywords = { "italic" },
+					strings = {},
+					variables = {},
+					numbers = {},
+					booleans = {},
+					properties = {},
+					types = {},
+					operators = {},
+					-- miscs = {}, -- Uncomment to turn off hard-coded styles
+				},
+				lsp_styles = { -- Handles the style of specific lsp hl groups (see `:h lsp-highlight`).
+					virtual_text = {
+						errors = { "italic" },
+						hints = { "italic" },
+						warnings = { "italic" },
+						information = { "italic" },
+						ok = { "italic" },
+					},
+					underlines = {
+						errors = { "underline" },
+						hints = { "underline" },
+						warnings = { "underline" },
+						information = { "underline" },
+						ok = { "underline" },
+					},
+					inlay_hints = {
+						background = true,
+					},
+				},
+				color_overrides = {},
+				custom_highlights = {},
+				default_integrations = true,
+				auto_integrations = false,
+				integrations = {
+					cmp = true,
+					gitsigns = true,
+					nvimtree = true,
+					notify = false,
+					mini = {
+						enabled = true,
+						indentscope_color = "",
+					},
+					-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+				},
 			})
-			-- require("onedark").load()
+
+			-- setup must be called before loading
+			vim.cmd.colorscheme("catppuccin-nvim")
 		end,
 	},
+	-- 	{
+	-- 		"folke/tokyonight.nvim",
+	-- 		lazy = false,
+	-- 		priority = 1000,
+	-- 		opts = {},
+	-- 		config = function()
+	-- 			local tokyonight = require("tokyonight")
+	-- 			tokyonight.setup({
+	-- 				style = "night",
+	-- 				styles = {
+	-- 					comments = { italic = true },
+	-- 					keywords = { italic = true },
+	-- 					functions = { bold = true },
+	-- 				},
+	-- 			})
+	-- 			tokyonight.load()
+	-- 		end,
+	-- 	},
+	-- 	{
+	-- 		"ntk148v/habamax.nvim",
+	-- 		dependencies = { "rktjmp/lush.nvim" },
+	-- 		config = function()
+	-- 			-- vim.cmd.colorscheme "habamax"
+	-- 		end,
+	-- 	},
+	-- 	{
+	-- 		"navarasu/onedark.nvim",
+	-- 		priority = 1000,
+	-- 		config = function()
+	-- 			require("onedark").setup({
+	-- 				code_style = {
+	-- 					comments = "italic",
+	-- 					keywords = "none",
+	-- 					functions = "bold",
+	-- 					strings = "none",
+	-- 					variables = "none",
+	-- 				},
+	-- 				style = "darker",
+	-- 			})
+	-- 			-- require("onedark").load()
+	-- 		end,
+	-- 	},
 }

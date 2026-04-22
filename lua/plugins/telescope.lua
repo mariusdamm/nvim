@@ -63,6 +63,7 @@ return {
 				layout_config = { prompt_position = "bottom" },
 				sorting_strategy = "descending",
 				winblend = 0,
+				borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
 			},
 			pickers = {
 				find_files = {
