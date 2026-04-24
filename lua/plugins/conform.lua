@@ -33,6 +33,7 @@ return {
 				python = { "isort", "black" },
 				markdown = { "prettier" },
 				make = { "mbake" },
+				yaml = { "prettier" },
 			},
 
 			-- HIER IST DIE 2. KORREKTUR: Mehr Zeit geben
