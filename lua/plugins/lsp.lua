@@ -4,6 +4,9 @@ local lsp = {
 	"pyright", -- python
 	"jdtls", -- java
 	-- "texlab", -- latex
+	-- "dockerls", -- docker
+	"yamlls", -- yaml
+	-- "docker_compose_language_service", -- docker compose
 }
 
 return {
@@ -24,6 +27,21 @@ return {
 			-- for _, server in ipairs(lsp) do
 			--   lspconfig[server].setup({})
 			-- end
+
+			require("lspconfig").yamlls.setup({
+				settings = {
+					yaml = {
+						schemaStore = {
+							-- You must disable built-in schemaStore support if you want to use
+							-- this plugin and its advanced options like `ignore`.
+							enable = false,
+							-- Avoid TypeError: Cannot read properties of undefined (reading 'length')
+							url = "",
+						},
+						schemas = require("schemastore").yaml.schemas(),
+					},
+				},
+			})
 
 			-- globale LSP-Keymaps
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show details" })
@@ -58,5 +76,9 @@ return {
 			vim.diagnostic.config({ virtual_text = false, virtual_lines = true })
 			vim.keymap.set("n", "<Leader>cl", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
 		end,
+	},
+	{
+		"b0o/schemastore.nvim",
+		lazy = true,
 	},
 }
