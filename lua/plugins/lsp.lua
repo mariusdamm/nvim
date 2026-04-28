@@ -21,6 +21,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = { "b0o/schemastore.nvim" },
 		config = function()
 			-- local lspconfig = require("lspconfig")
 			--
@@ -28,7 +29,7 @@ return {
 			--   lspconfig[server].setup({})
 			-- end
 
-			require("lspconfig").yamlls.setup({
+			vim.lsp.config("yamlls", {
 				settings = {
 					yaml = {
 						schemaStore = {
