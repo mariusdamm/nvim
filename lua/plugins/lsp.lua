@@ -7,6 +7,7 @@ local lsp = {
 	-- "dockerls", -- docker
 	"yamlls", -- yaml
 	-- "docker_compose_language_service", -- docker compose
+	"buf_ls", -- protobuf
 }
 
 return {
